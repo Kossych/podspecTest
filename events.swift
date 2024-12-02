@@ -1,69 +1,92 @@
 //description
-class Event {
+class Event: Codable {
     var value: String = "sampleValue"
     init(value: String) {
-        this.value = value
+        self.value = value
     }
+    override func toJson(): String{
+        let jsonData = try JSONEncoder().encode(this)
+        return String(data: jsonData, encoding: String.Encoding.utf8)
+    }
+
 }
 
 //desc
-class TEST {
-    var Test: test? = null
+class TEST: Codable {
+    var Test: test? = nil
     init(Test: test) {
-        this.Test = Test
+        self.Test = Test
+    }
+    override func toJson(): String{
+        let jsonData = try JSONEncoder().encode(this)
+        return String(data: jsonData, encoding: String.Encoding.utf8)
     }
 
 }
 
-class test {
-    var Govno: govno? = null
-    var Object: object? = null
+class test: Codable {
+    var Govno: govno? = nil
+    var Object: object? = nil
     init(Govno: govno, Object: object) {
-        this.Govno = Govno
-        this.Object = Object
+        self.Govno = Govno
+        self.Object = Object
+    }
+    override func toJson(): String{
+        let jsonData = try JSONEncoder().encode(this)
+        return String(data: jsonData, encoding: String.Encoding.utf8)
     }
 
 }
 
-class govno {
-    var path: String? = null
+class govno: Codable {
+    var path: String? = nil
     init(path: String) {
-        this.path = path
+        self.path = path
+    }
+    override func toJson(): String{
+        let jsonData = try JSONEncoder().encode(this)
+        return String(data: jsonData, encoding: String.Encoding.utf8)
     }
 
 }
 
-class object {
+class object: Codable {
     var testDouble: String = "string"
     var testTesta: String = "testTesta"
     init(testDouble: String, testTesta: String) {
-        this.testDouble = testDouble
-        this.testTesta = testTesta
+        self.testDouble = testDouble
+        self.testTesta = testTesta
     }
+    override func toJson(): String{
+        let jsonData = try JSONEncoder().encode(this)
+        return String(data: jsonData, encoding: String.Encoding.utf8)
+    }
+
 }
 
 //ddd
-class Main Page {
-    var User_properties: user_properties? = null
+class MainPage: Codable {
+    var User_properties: user_properties? = nil
     init(User_properties: user_properties) {
-        this.User_properties = User_properties
+        self.User_properties = User_properties
+    }
+    override func toJson(): String{
+        let jsonData = try JSONEncoder().encode(this)
+        return String(data: jsonData, encoding: String.Encoding.utf8)
     }
 
 }
 
-class user_properties{
+class user_properties: Codable {
     var int_number: Int
     var string_atr: String
     init(int_number: Int, string_atr: String) {
-        this.int_number = int_number
-        this.string_atr = string_atr
+        self.int_number = int_number
+        self.string_atr = string_atr
     }
-}
+    override func toJson(): String{
+        let jsonData = try JSONEncoder().encode(this)
+        return String(data: jsonData, encoding: String.Encoding.utf8)
+    }
 
-//description
-class TEST{
-    var value: String = "dasdsadsad"
-    init(value: String) {
-        this.value = value
-    }
 }
