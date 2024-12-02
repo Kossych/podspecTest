@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name = 'popspecTest'
+    spec.name = 'podspecTest'
     spec.version = '1.0.0'
 
     spec.authors = ''
